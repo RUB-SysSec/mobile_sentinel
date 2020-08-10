@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:stretchColumns="*">
+
+
+    <TableRow
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/start_logging_button"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:background="@drawable/testbutton"
+
+            android:text="Start Logging"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/stop_logging_button"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/testbutton"
+            android:text="Stop Logging"
+            android:textColor="@android:color/black" />
+    </TableRow>
+
+
+</TableLayout>

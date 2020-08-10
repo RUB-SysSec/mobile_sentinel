@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_icon"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_detection"
+        android:icon="@drawable/ic_phone_locked_black_24dp"
+        android:title="Detection" />
+
+    <item
+        android:id="@+id/nav_logging"
+        android:icon="@drawable/ic_radio_button_checked_black_24dp"
+        android:title="Logging" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings_applications_black_24dp"
+        android:title="Settings" />
+
+
+</menu>

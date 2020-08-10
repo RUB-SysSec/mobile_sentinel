@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/packetsSearchButton"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:onClick=""
+
+
+        />
+
+</menu>

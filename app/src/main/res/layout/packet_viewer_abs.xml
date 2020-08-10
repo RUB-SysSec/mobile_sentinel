@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+    <TextView
+        android:padding="11dp"
+        android:id="@+id/packetViewerActionBarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Packet Viewer"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/packetViewerActionBarTitle"
+        android:background="@android:color/holo_orange_dark" />
+
+    <ImageButton
+
+        android:outlineAmbientShadowColor="@android:color/black"
+        android:outlineSpotShadowColor="@android:color/black"
+        android:backgroundTint="@android:color/darker_gray"
+        android:layout_alignParentRight="true"
+        android:id="@+id/packetSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_search_24" />
+
+
+
+</RelativeLayout>
