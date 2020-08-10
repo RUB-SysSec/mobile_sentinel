@@ -11,10 +11,10 @@ The application includes:
  
  
 ## Installation
-Download the latest APK build from here (add download link) and install it directly on the device. 
+Download the latest APK build from [here](https://github.com/RUB-SysSec/mobile_sentinel/releases/download/0.9/MobileSentinel.apk) and install it directly on the device. 
 
 ```
-adb install mobilesentinel.apk
+adb install MobileSentinel.apk
 ```
 
 ## Build instructions
