@@ -51,7 +51,8 @@ public class BaseStationLTE {
         }
 
         if (this.cellInfoList != null) {
-            CellInfo cellInfo = this.cellInfoList.get(0);
+            try {
+                CellInfo cellInfo = this.cellInfoList.get(0);
 
                 if (cellInfo instanceof CellInfoLte) {
                     //4G
@@ -73,6 +74,9 @@ public class BaseStationLTE {
                         this.setDbm(cellInfoLte.getCellSignalStrength().getDbm());
                     }
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
 
 

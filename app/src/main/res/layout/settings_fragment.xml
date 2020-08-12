@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:outlineAmbientShadowColor="@android:color/holo_orange_dark"
-        android:text="Upload Vulnerable Base Station"
+        android:text="Configure Log Upload Settings"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,48 +22,42 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:layout_marginBottom="568dp"
+        android:layout_width="243dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="36dp"
         android:outlineAmbientShadowColor="@android:color/holo_orange_dark"
         android:text="Change Call Number"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="68dp"
-        android:layout_height="28dp"
-        android:layout_marginEnd="4dp"
-        android:buttonTint="#FF5722"
-        android:shadowColor="@android:color/holo_orange_dark"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
 
     <Button
         android:id="@+id/changeNumberButton"
         android:layout_width="81dp"
         android:layout_height="40dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginBottom="560dp"
         android:text="Choose"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.992"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/uploadSettingsButton" />
+
+    <Button
+        android:id="@+id/uploadSettingsButton"
+        android:layout_width="81dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="56dp"
+        android:text="Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -68,7 +68,6 @@ public class LoggingFragment extends Fragment {
         stopLoggingButtonListener();
         mContext = getActivity();
         sdcard = Environment.getExternalStorageDirectory();
-        System.out.println(sdcard);
         if (!Python.isStarted())
             Python.start(new AndroidPlatform(mContext));
         packetList = new ArrayList<>();
@@ -126,10 +125,10 @@ public class LoggingFragment extends Fragment {
                         PyObject pyf = py.getModule("setup_parser");
                         pyf.callAttr("stop_logging");
 
-                        File baseDir = new File(Environment.getExternalStorageDirectory() + "/logs/" + filename);
-                        System.out.println(baseDir);
+                        File baseDir = new File(Environment.getExternalStorageDirectory() + "/MobileSentinel/" + filename);
 
-                        // TODO: Dirty
+
+
                         String qmdlFilename = "";
 
                         for (File f : baseDir.listFiles()) {
@@ -137,16 +136,19 @@ public class LoggingFragment extends Fragment {
                                 qmdlFilename = f.getName();
                             }
                         }
-                        pyf.callAttr("initiate_parsing", packetList, filename, qmdlFilename);
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                listView.setAdapter(adapter);
-                                System.out.println("Packets updated");
-                                loggingInfoText.setVisibility(View.INVISIBLE);
-                                startLoggingButton.setClickable(true);
-                            }
-                        });
+                        if (!qmdlFilename.isEmpty()) {
+                            pyf.callAttr("initiate_parsing", packetList, filename, qmdlFilename);
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    listView.setAdapter(adapter);
+
+                                    loggingInfoText.setVisibility(View.INVISIBLE);
+                                    startLoggingButton.setClickable(true);
+                                }
+                            });
+                        }
+
 
                     }
                 }
