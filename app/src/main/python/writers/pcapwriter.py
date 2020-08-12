@@ -14,7 +14,6 @@ class PcapWriter:
         self.ip_id = 0
         self.base_address = 0x7f000001
         d = str(Environment.getExternalStorageDirectory()) + '/MobileSentinel/' + filename
-        print("PCAP location:  " + d)
         filepath = os.path.join(d, self.filename)
         self.pcap_file = open(filepath, 'wb')
         self.eth_hdr = b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00'

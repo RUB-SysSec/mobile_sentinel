@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/mobile_sentinel.iml" filepath="$PROJECT_DIR$/.idea/mobile_sentinel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MobileSentinel.iml" filepath="$PROJECT_DIR$/.idea/modules/MobileSentinel.iml" group="MobileSentinel" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="MobileSentinel/app" />
     </modules>
   </component>
 </project>
