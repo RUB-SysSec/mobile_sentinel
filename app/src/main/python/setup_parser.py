@@ -68,7 +68,7 @@ def start_logging(filename):
 def stop_logging():
     # subprocess.Popen(['su','-c','diag_mdlog -k'])
     print(subprocess.check_output(['su', '-c', 'diag_mdlog -k']))
-    print("Mdlog is stopped")
+    #print("Mdlog is stopped")
 
 
 def initiate_parsing(packet_list, dump_directory, dump_filename, detection_view=None,
@@ -76,9 +76,7 @@ def initiate_parsing(packet_list, dump_directory, dump_filename, detection_view=
     # Setup dump parser modules
     my_parser = parsers.QualcommParser(packet_list, detection_view, isVulnerable)
     d = str(Environment.getExternalStorageDirectory());
-    print(d)
     filepath = os.path.join(d, 'MobileSentinel/' + dump_directory + '/' + dump_filename)
-    print(filepath)
     try:
         io_device = iodevices.FileIO([str(filepath)])
         my_parser.set_io_device(io_device)

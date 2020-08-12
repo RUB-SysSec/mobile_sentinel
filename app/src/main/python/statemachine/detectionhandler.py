@@ -23,6 +23,14 @@ class DetectionHandler:
             if 'rrcConnectionReconfiguration' in data['message']['c1']:
                 return data
 
+        if str(rrc_subtype) == "gsmtap_lte_rrc_types.UL_DCCH":
+            sch = RRCLTE.EUTRA_RRC_Definitions.UL_DCCH_Message
+            sch.from_uper(unhexlify(msg))
+            json_string = sch.to_json()
+            data = json.loads(json_string)
+            if 'securityModeComplete' in data['message']['c1']:
+                self.call_flow.clear()
+
     def revolte_check(self, rrc_subtype, msg):
 
         parsed_msg = self.filter_packet(rrc_subtype, msg)
@@ -52,7 +60,7 @@ class DetectionHandler:
 
                             # Add each DRB ID to the list
                             self.call_flow.append(iter)
-                            print(self.call_flow)
+
 
 
             except KeyError as e:
@@ -74,11 +82,8 @@ class DetectionHandler:
                                     'criticalExtensions']['c1'][
                                     'rrcConnectionReconfiguration-r8']['securityConfigHO'][
                                     'handoverType']:
-                            print("HandoverType")
 
-                            print(iter)
-                            print("Calling clear")
-                            # Clear list after a securityConfigHO trigger as old DRB IDs may be reused now
+                            # Clear list after a securityConfigHO trigger as new encryption key K_UP is derived and old DRB IDs may be reused now
                             self.call_flow.clear()
 
 

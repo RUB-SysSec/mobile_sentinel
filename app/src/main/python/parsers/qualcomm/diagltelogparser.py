@@ -1094,15 +1094,14 @@ class DiagLteLogParser:
             device_usec = ts_usec)
 
         self.packetArrayWriter.append_packet(rrc_subtype_map[subtype], msg_content.hex())
+        #self.detection_handler.revolte_check("gsmtap_lte_rrc_types.UL_DCCH", '2a00')
         is_vulnerable = self.detection_handler.revolte_check(rrc_subtype_map[subtype], msg_content.hex())
 
 
         if is_vulnerable == True and self.detection_view is not None:
-            print("is vulnerable is true")
 
             if self.detection_view.getText() != "Cell: VULNERABLE":
                 self.detection_view.setText("Cell: VULNERABLE")
-                print(self.detection_view.getText())
                 self.isVulnerable = True
 
         self.parent.writer.write_cp(gsmtap_hdr + msg_content, radio_id, pkt_ts)
