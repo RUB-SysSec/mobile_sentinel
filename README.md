@@ -11,11 +11,13 @@ The application includes:
  
  
 ## Installation
-Download the latest APK build from [here](https://github.com/RUB-SysSec/mobile_sentinel/releases/download/0.9/MobileSentinel.apk) and install it directly on the device. 
+Download the latest APK build from [here](https://github.com/RUB-SysSec/mobile_sentinel/releases/download/1.0/MobileSentinel.apk) and install it directly on the device. 
 
 ```
 adb install MobileSentinel.apk
 ```
+
+Alternatively, the app can be installed directly from the device's file system.
 
 ## Build instructions
 
@@ -27,6 +29,8 @@ You can build the application from source as well however, you will need a [Chaq
 - Rooted Android Phone with a Qualcomm Baseband
 - The phone AND the used SIM Card must support VoLTE
 - Currently requires minimum Android Pie (9.0)
+
+*Make sure to grant Superuser rights to the application and accept the requested permissions, as the application will not work without.*
 
 ## Tested Devices
  - Xiaomi Mi A3 (Android 9.0)
