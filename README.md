@@ -19,6 +19,14 @@ adb install MobileSentinel.apk
 
 Alternatively, the app can be installed directly from the device's file system.
 
+## Settings
+
+-  Configure Log Upload Setting: This setting allows you to change the behavior for uploading the log files to the server. Options: 
+   - Ask for Upload: Will ask after each test run if you would upload the data (Default).
+   - Never Upload: Will never upload the logs.
+   - Always Upload: Will always upload the logs.
+-  Change Call Number: This setting allows you to change the phone number that is called for testing. *Important note: there may be a risk of expense.* Default number is a german phone number.  
+
 ## Build instructions
 
 You can build the application from source as well however, you will need a [Chaquopy SDK](https://chaquo.com/chaquopy/license/) license to be able to deploy the app outside of Android Studio.
